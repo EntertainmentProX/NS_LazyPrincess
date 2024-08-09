@@ -11,10 +11,10 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', 'lazyPrinces')
-API_ID = int(environ.get('API_ID', '20854013'))
-API_HASH = environ.get('API_HASH', '1c19d83f90348584587bcb0ba7c5d38383')
-BOT_TOKEN = environ.get('BOT_TOKEN', "581845604:BBFU9Yx2LRhw1m8usazVWTYIBE0kfn7wVCY")
+SESSION = environ.get('SESSION', 'EntertainmentProX')
+API_ID = int(environ.get('API_ID', '20728533'))
+API_HASH = environ.get('API_HASH', '5e2275c78b95280c96bef5f460bb2bb4')
+BOT_TOKEN = environ.get('BOT_TOKEN', "7243377692:AAGJyMD7x0N_iIbd_yZQFLcxQlL8SHvTLO4")
 
 #Port
 PORT = environ.get("PORT", "8080")
@@ -25,23 +25,23 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/a16ae2dd92e3b67df73ca.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '899497512').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001727865520').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '889497512').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5260404546').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002186127854').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001697509780')
+auth_channel = environ.get('AUTH_CHANNEL', '-1002186127854')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://username:<password>@cluster0.kpvaf5q.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://username:<password>@cluster0.mongodb+srv://EntertainmentProX:<password>@cluster0.uljsf.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001835997345'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'LazyPrincessSupport')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002159027096'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'EntertainmentProXSupport')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
